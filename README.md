@@ -1,5 +1,5 @@
 # housewares-store-manage-Website
-- Description: Customer can get household products with categories which make them easy to find out. This website is designed simply so that each customer can interact easily. Products details with price are mentioned. The password can be Recovered Easily and Secure (password hashed by Bycrypt).
+- Description: Customer can get household products with categories which make them easy to find out. This website is designed simply so that each customer can interact easily. Products details with price are mentioned. The password can be Recovered Easily and Secure (password hashed by Bycrypt).Products, orders are easily managed and revenue is visually statistically displayed with charts
 - Technologies: 
   + Framework: Spring MVC.
   + Languages: Java, HTML, CSS, AJAX.
