@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">	
+	<bean
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
+		id="messageSource">
+		<property value="UTF-8" name="defaultEncoding" />	
+		<property name="basenames">
+			<list>
+				<value>classpath:login</value>
+				<value>classpath:login_vi</value>
+				<value>classpath:signup</value>
+				<value>classpath:signup_vi</value>
+				<value>classpath:forgot-password</value>
+				<value>classpath:forgot-password_vi</value>
+				<value>classpath:header</value>
+				<value>classpath:header_vi</value>
+				<value>classpath:index</value>
+				<value>classpath:index_vi</value>
+				<value>classpath:product</value>
+				<value>classpath:product_vi</value>
+				<value>classpath:blog</value>
+				<value>classpath:blog_vi</value>
+				<value>classpath:cart</value>
+				<value>classpath:cart_vi</value>				
+				<value>classpath:account</value>
+				<value>classpath:account_vi</value>			
+				<value>classpath:order</value>
+				<value>classpath:order_vi</value>
+				<value>classpath:checkout</value>
+				<value>classpath:checkout_vi</value>
+			</list>
+		</property>
+	</bean>
+	<!-- I18N -->	
+	<bean
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver"
+		id="localeResolver">
+		<property value="vi" name="defaultLocale" />
+		<property value="43200" name="cookieMaxAge" />
+
+	</bean>	
+	<mvc:interceptors>		
+		<bean
+			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+			id="localeChangeInterceptor">
+			<property value="language" name="paramName" />
+		</bean>
+	</mvc:interceptors>
+</beans>
